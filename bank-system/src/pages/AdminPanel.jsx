@@ -4,9 +4,15 @@ function AdminPanel({ count, setCount, task, setTask }) {
     
     const navigate = useNavigate()
 
-    const increment = () => {
+    const increment = (event) => {
         event.preventDefault();
         setCount(prevCount => prevCount + 1)
+
+        if(count > 0){
+          speechSynthesis.cancel();
+          const speech = new SpeechSynthesisUtterance(`Token number ${count}`)
+          speechSynthesis.speak(speech)
+        }
         alert("Next Task Number is : "+count)
     }
 
