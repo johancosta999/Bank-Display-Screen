@@ -12,14 +12,14 @@ function AdminPanel({ count, setCount, task, setTask }) {
 
     const taskHandler = () => {
       setTask(true)
-      
+      setCount(prevCount => prevCount +1)
     }
 
   return (
     <div>
 
       {
-        count > 0? (
+        count > 1? (
           <div><h1>The task is {count - 1}</h1></div>
         ) :
 

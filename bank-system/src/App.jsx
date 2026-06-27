@@ -5,7 +5,7 @@ import DisplayPage from "./pages/DisplayScreen";
 
 function App() {
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [task, setTask] = useState(false);
 
   return (
