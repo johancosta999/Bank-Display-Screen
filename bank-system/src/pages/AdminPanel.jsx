@@ -12,10 +12,23 @@ function AdminPanel({ count, setCount, task, setTask }) {
 
     const taskHandler = () => {
       setTask(true)
+      
     }
 
   return (
     <div>
+
+      {
+        count > 0? (
+          <div><h1>The task is {count - 1}</h1></div>
+        ) :
+
+        (
+          <div><h1>Welcome Back, Admin!</h1></div>
+        )
+
+      }
+    
     {task ? 
     (
       <div>
