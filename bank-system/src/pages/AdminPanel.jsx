@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
 function AdminPanel() {
+    
     const handleSubmit = () => {
-        return
+        
     }
 
   return (
     <div>
-      <button>Task Finished</button>
+      <button onClick={handleSubmit}>Task Finished</button>
     </div>
   )
 }
