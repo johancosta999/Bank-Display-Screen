@@ -1,9 +1,7 @@
-import  { useState } from 'react'
 import { useNavigate } from "react-router-dom"
 
-function AdminPanel() {
-    const [count, setCount] = useState(0);
-    const [task, setTask] = useState(false);
+function AdminPanel({ count, setCount, task, setTask }) {
+    
     const navigate = useNavigate()
 
     const increment = () => {
@@ -11,8 +9,6 @@ function AdminPanel() {
         setCount(prevCount => prevCount + 1)
         alert("Next Task Number is : "+count)
     }
-
-
 
     const taskHandler = () => {
       setTask(true)

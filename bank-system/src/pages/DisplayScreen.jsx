@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom"
 
 
-function DisplayScreen() {
+function DisplayScreen({count}) {
   
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
+    
 
     return (
     <div>
-      <h1>Hi</h1>
+      <h1>{count}</h1>
 
       <button onClick={() => navigate("/")}>Go back to Admin Panel</button>
     </div>
