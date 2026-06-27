@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import  { useState } from 'react'
 
 function AdminPanel() {
-    
-    const handleSubmit = () => {
-        
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        event.preventDefault();
+        setCount(prevCount => prevCount + 1)
+        alert("Next Task Number is : "+count)
     }
 
   return (
     <div>
-      <button onClick={handleSubmit}>Task Finished</button>
+      <button onClick={increment}>Task Finished</button>
     </div>
   )
 }
