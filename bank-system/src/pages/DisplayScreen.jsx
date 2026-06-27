@@ -11,7 +11,7 @@ function DisplayScreen({count}) {
     <div>
       <h1>{count -1}</h1>
 
-      <button onClick={() => navigate("/")}>Go back to Admin Panel</button>
+      <button onClick={() => navigate("/admin")}>Go back to Admin Panel</button>
     </div>
   )
 }
